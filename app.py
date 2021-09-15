@@ -10,6 +10,7 @@ try:
         apps.append(i.rstrip(i[-1]))
         # print("HI THIS IS " + (i.rstrip(i[-1])))
     print(apps)
+    
 except:
     apps = []
 
@@ -57,6 +58,10 @@ canvas.pack()
 
 frame = tk.Frame(root, bg="#474747")
 frame.place(relwidth=0.7, relheight=0.7, relx=0.1, rely=0.1)
+
+for app in apps:
+    label= tk.Label(frame, text=app, bg="white")
+    label.pack()
 
 chooseFile = tk.Button(root, text="Choose File", padx=10, pady=5, fg="white", bg="#474747", command=addApp)
 chooseFile.pack()
